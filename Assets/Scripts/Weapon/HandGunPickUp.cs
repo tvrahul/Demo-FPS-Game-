@@ -9,6 +9,7 @@ public class HandGunPickUp : MonoBehaviour
     [SerializeField] GameObject fakeHandgun;
     [SerializeField] AudioSource handgunPickUpSound;
     [SerializeField] GameObject pickUpDisplay;
+    [SerializeField] GameObject pistolImage;
 
      void OnTriggerEnter(Collider other)
     {
@@ -19,6 +20,7 @@ public class HandGunPickUp : MonoBehaviour
         pickUpDisplay.SetActive(false);
         pickUpDisplay.GetComponent<TextMeshProUGUI>().text = "HANDGUN COLLECTED";
         pickUpDisplay.SetActive(true);
+        pistolImage.SetActive(true);
 
 
     }

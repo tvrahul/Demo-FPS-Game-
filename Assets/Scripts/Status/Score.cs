@@ -9,6 +9,7 @@ public class Score : MonoBehaviour
     public GameObject scoreDisplay;
     public static int scoreValue =  0;
     public int internalScore;
+    [SerializeField] GameObject finalScore;
 
     
 
@@ -16,5 +17,6 @@ public class Score : MonoBehaviour
     {
         internalScore = scoreValue;
         scoreDisplay.GetComponent<TextMeshProUGUI>().text = "" + scoreValue;
+        finalScore.GetComponent<TextMeshProUGUI>().text = "" + scoreValue;
     } 
 }

@@ -15,6 +15,7 @@ public class FullHealthCollect : MonoBehaviour
        
         healthCollectSound.Play();
         this.GetComponent<BoxCollider>().enabled = false;
+        this.gameObject.SetActive(false);
         
 
 

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class RestartLevel : MonoBehaviour
 {
     public GameObject gameOver;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,14 @@ public class RestartLevel : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(2);
+            if (Complete_One.nextFloor == 4)
+            {
+                SceneManager.LoadScene(2);
+            }
+            else
+            {
+                SceneManager.LoadScene(Complete_One.nextFloor);
+            }
         }
     }
 

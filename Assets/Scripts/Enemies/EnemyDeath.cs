@@ -22,6 +22,9 @@ public class EnemyDeath : MonoBehaviour
             theEnemy.GetComponent<Animator>().Play("Death"); //the enemy object hase ema Animator object gotine Death Animation Play karse
             enemyAI.SetActive(false);
             theEnemy.GetComponent<LookPlayer>().enabled = false;
+            Score.scoreValue += 100;
+            Complete_One.enemyCount += 1;
+           
         }
     }
 }
